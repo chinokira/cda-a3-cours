@@ -1,18 +1,8 @@
 let button = document.querySelector('button')
-button.addEventListener('click', () =>{
-    // var textAreaComment = document.querySelector('textarea')
-    // var textAreaComments = textAreaComment.className
-    // console.log(textAreaComment);
-    // console.log(textAreaComments);
+button.addEventListener('click', AddCommentaire)
 
-    // var divUnderText = document.querySelector('div')
-    // var divUnderTexts = divUnderText.className
-    // console.log(divUnderText);
-    // console.log(divUnderTexts);
 
-    // var text = textAreaComments.getAttribute
-    // divUnderTexts.add(text)
-
+function AddCommentaire(){
     let commentaire = document.querySelector('#commentaire');
     let comments = document.querySelector('#comments');
 
@@ -22,23 +12,9 @@ button.addEventListener('click', () =>{
     p.innerHTML = commentaire.value;
     comments.appendChild(p);
     commentaire.value = '';
-})
+}
 
-
-// function AddCommentaire(){
-//     // var textAreaComment = document.querySelector('textarea')
-//     // var textAreaComments = textAreaComment.className
-//     // console.log(textAreaComment);
-//     // console.log(textAreaComments);
-
-//     // var divUnderText = document.querySelector('div')
-//     // var divUnderTexts = divUnderText.className
-//     // console.log(divUnderText);
-//     // console.log(divUnderTexts);
-
-//     // var text = textAreaComments.getAttribute
-//     // divUnderTexts.add(text)
-
+// var AddCommentaire = function (){
 //     let commentaire = document.querySelector('#commentaire');
 //     let comments = document.querySelector('#comments');
 

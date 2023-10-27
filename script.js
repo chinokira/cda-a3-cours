@@ -2,7 +2,6 @@ function afficherMessage() {
     alert('hello')
 }
 
-
 var intro = window.document.getElementById('intro')
 // console.log(intro);
 // console.log(intro.innerHTML);
@@ -13,7 +12,7 @@ var rouges = document.getElementsByClassName('rouge')
 //     console.log(rouge.innerHTML);
 // }
 
-var paragraphes = document.getElementsByTagName('p')
+
 // for (const para of paragraphes) {
 //     console.log(para.innerHTML);
 // }
@@ -33,5 +32,39 @@ function changerLien() {
     lien.innerHTML = "consulter l'actualité"
 }
 
+var premierParagraphe = document.querySelector('p')
+// console.log(premierParagraphe.classList);
+// console.log(premierParagraphe.className);
+var classes = premierParagraphe.classList
+// classes.replace('rouge', 'bleu')
+// classes.toggle('rouge')
+// classes.toggle('bleu')
+// console.log(classes.contains('bleu'));
+// console.log(classes.contains('rouge'));
+// classes.add('bleu', 'gras')
+
+
+
 // var lien = document.querySelector('a')
 // console.log(lien.getAttribute('href'));
+
+
+function switchColor()
+{
+    var paragraphes = document.getElementsByTagName('p')
+    for (const paragraphe of paragraphes){
+        var classes = paragraphe.classList
+        if (classes.contains('rouge')){
+            classes.replace('rouge', 'bleu')
+        }
+        else {
+            classes.replace('bleu', 'rouge')
+        }
+    }
+    // var classes = paragraphes.classList
+    // if (paragraphes.className = 'rouge')
+    // {
+    //     classes.toggle('bleu')
+    // }
+    // classes.toggle('rouge')
+}
